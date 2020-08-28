@@ -145,7 +145,7 @@ int BlinkCount = 0;
 int NextBlinkAnim = 16;
 int LastScoreForBlink;
 bool IsPaused;
-bool DebugMode = true;
+bool DebugMode = false;
 int TimeBeforeRestart = 20;
 bool PartyStated;
 
