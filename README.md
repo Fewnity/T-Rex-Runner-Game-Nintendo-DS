@@ -25,7 +25,7 @@ Download an IDE software like [Visual Studio Code](https://code.visualstudio.com
 
 Download [devkitPro](https://github.com/devkitPro/installer/releases).
 
-Put the Google_Chrome folder in "examples" devkitPro folder ex: C:\devkitPro\examples.
+Put the Google_Chrome folder in "examples" devkitPro folder like: C:\devkitPro\examples\Google_Chrome.
 
 ### Compile the game
 Open the IDE console and write make.
