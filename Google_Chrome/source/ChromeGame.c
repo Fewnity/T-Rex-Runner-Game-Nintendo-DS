@@ -83,8 +83,8 @@ int heldKey;
 u16 *PlayerGfx1;
 u16 *PlayerGfx2;
 
-int AnimSprite1Id = 2;
-int AnimSprite2Id = 2;
+int AnimSprite1Id = 0;
+int AnimSprite2Id = 0;
 int AnimCount = ChangeAnimAt;
 
 bool IsDown;
@@ -624,9 +624,8 @@ int main(void)
                     if (xPlayerPosition - AllObstacles[i].x + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner1X <= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner2X && xPlayerPosition - AllObstacles[i].x + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner2X >= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner1X)                                 //Left & right OK
                         if (yPlayerPosition + yJumpOffset - AllObstacles[i].y + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner1Y <= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner2Y && yPlayerPosition + yJumpOffset - AllObstacles[i].y + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner2Y >= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner1Y) //Top & Bottom ok
                         {
-                            //IsDead = true;
-                            //iprintf("Col at %d,%d ", AllObstacles[i].x, i);
-                            iprintf("Col %d:%d ", CurrentPlayerHitBox, CurrentObstacleHitBox);
+                            IsDead = true;
+                            //iprintf("Col %d:%d ", CurrentPlayerHitBox, CurrentObstacleHitBox);
                         }
                 }
             }
@@ -667,8 +666,6 @@ int main(void)
 
                 iprintf("\x1b[10;8HG A M E  O V E R");
                 iprintf("\x1b[12;5HANY BUTTON  TO RESTART");
-
-                //UpdateSprite(xPlayerPosition, yPlayerPosition, &oamMain, PlayerGfx1, 0, 0);
 
                 if (IsDown)
                 {
