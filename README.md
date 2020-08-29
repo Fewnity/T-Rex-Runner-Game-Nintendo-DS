@@ -32,3 +32,7 @@ Put the Google_Chrome folder in "examples" devkitPro folder like: C:\devkitPro\e
 Open the IDE console and write make.
 
 The Nintendo DS game file will be here : C:\devkitPro\examples\Google_Chrome\Google_Chrome.nds
+
+# Follow me
+[My Youtube channel Fewnity : https://www.youtube.com/channel/UCMdczbLIOCt5PQG_GPyIp_w](https://www.youtube.com/channel/UCMdczbLIOCt5PQG_GPyIp_w)
+[My twitter : https://twitter.com/Fewnity](https://twitter.com/Fewnity)
