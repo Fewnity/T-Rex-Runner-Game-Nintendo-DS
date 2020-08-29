@@ -12,7 +12,8 @@ Created with devkitPro for Nintendo DS.
 <img src="https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/blob/master/Images/Capture2.PNG" width="600">
 
 **How to run the game :**
-Download Google_Chrome/Google_Chrome.nds
+
+Download Google_Chrome/Google_Chrome.nds or [here](https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/raw/master/Google_Chrome/Google_Chrome.nds)
 
 Run it on Emulator like [melonDS](http://melonds.kuribo64.net/downloads.php).
 
