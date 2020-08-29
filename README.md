@@ -3,7 +3,7 @@ T-Rex runner game from Google Chrome on Nintendo DS.
 
 Created with devkitPro for Nintendo DS.
 
-**Screenshoots from emulator :**
+**Screenshots from emulator**
 
 <img src="https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/blob/master/Images/Capture1.PNG" width="600">
 
@@ -11,11 +11,11 @@ Created with devkitPro for Nintendo DS.
 
 <img src="https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/blob/master/Images/Capture2.PNG" width="600">
 
-**How to run the game :**
+**How to run the game**
 
 Download Google_Chrome/Google_Chrome.nds or [here](https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/raw/master/Google_Chrome/Google_Chrome.nds).
 
-Run it on Emulator like [melonDS](http://melonds.kuribo64.net/downloads.php).
+Run it on emulator like [melonDS](http://melonds.kuribo64.net/downloads.php).
 
 **For a real Nintendo DS**, you will need a R4 linker, may no work on other linker like M3DS REAL.
 
