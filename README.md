@@ -3,6 +3,8 @@ T-Rex runner game from Google Chrome on Nintendo DS.
 
 Created with devkitPro for Nintendo DS.
 
+[Video of the game here!](https://youtu.be/KXw6DIv5Y4c)
+
 **Screenshots from emulator**
 
 <img src="https://github.com/Fewnity/T-Rex-Runner-Game-Nintendo-DS/blob/master/Images/Capture1.PNG" width="600">
