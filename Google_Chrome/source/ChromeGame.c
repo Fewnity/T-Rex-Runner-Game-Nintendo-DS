@@ -40,7 +40,7 @@ typedef struct
 {
     int x, y; //Prop x/y location
 
-    int Type;      // Sprite Apparence :
+    int Type;      // Sprite Apparence
     bool IsMoving; //Is obstacle moving
     bool WingsUp;  //Is bird has wings up?
     int NextAnimationIn;
@@ -50,7 +50,7 @@ typedef struct
 typedef struct
 {
     float x, y, Speed; //Prop x/y location
-    int Type;          //Sprite Apparence :
+    int Type;          //Sprite Apparence
     bool IsMoving;     //Is decor moving
     u16 *gfx[2];       // oam GFX
 } Decor;
@@ -130,10 +130,10 @@ bool NightMode;
 int Speed = 3;
 const int MaxSpeed = 6;
 const int MinSpeed = 3;
-int NextObstacle = 100; //Frame count for adding obstacle
-int NextDecor = 1;      //Frame count for adding decor
-int NextNight = 1500;   //Frame count for switching to night or day
-float NightColorCoef = 1;
+int NextObstacle = 100;   //Frame count for adding obstacle
+int NextDecor = 1;        //Frame count for adding decor
+int NextNight = 1500;     //Frame count for switching to night or day
+float NightColorCoef = 1; //1 = day colors, 0 = night color. Used for color transition
 
 //
 //Party values
@@ -142,12 +142,12 @@ int CurrentHiScore = 0;
 int NextScore = 4; //Frame count for adding point
 int NextPointSound = 100;
 int BlinkCount = 0;
-int NextBlinkAnim = 16;
+int NextBlinkAnim = 16; //Frame count for new score text blinking
 int LastScoreForBlink;
 bool IsPaused;
 bool DebugMode = false;
 int TimeBeforeRestart = 20;
-bool PartyStated;
+bool PartyStarted;
 
 //
 //File system
@@ -214,6 +214,7 @@ int main(void)
         for (int i2 = 0; i2 < 4; i2++)
             AllObstacles[i].gfx[i2] = oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
+    //Allow 4 GFX Id for each decor
     for (int i = 0; i < 5; i++)
         for (int i2 = 0; i2 < 2; i2++)
             AllDecor[i].gfx[i2] = oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
@@ -231,58 +232,59 @@ int main(void)
     //Update screen
     oamUpdate(&oamMain);
 
-    AllSpriteData[0].HitBoxCount = 3; //Normal player
-    SetHitBox(0, 0, /*x,y*/ 8, 16, /*x,y*/ 19, 31);
-    SetHitBox(0, 1, /*x,y*/ 16, 0, /*x,y*/ 31, 9);
-    SetHitBox(0, 2, /*x,y*/ 0, 10, /*x,y*/ 15, 19);
+    //Hit box setup : //C1 is the Top left corner of the 2d box and C2 is the bottom right corner. Position in pixel.
+    AllSpriteData[0].HitBoxCount = 3; //Normal T-rex
+    SetHitBox(0, 0, /*C1 x,y*/ 8, 16, /*C2 x,y*/ 19, 31);
+    SetHitBox(0, 1, /*C1 x,y*/ 16, 0, /*C2 x,y*/ 31, 9);
+    SetHitBox(0, 2, /*C1 x,y*/ 0, 10, /*C2 x,y*/ 15, 19);
 
-    AllSpriteData[1].HitBoxCount = 1;
-    SetHitBox(1, 0, /*x,y*/ 0, 11, /*x,y*/ 41, 27);
+    AllSpriteData[1].HitBoxCount = 1; //Crouched T-rex
+    SetHitBox(1, 0, /*C1 x,y*/ 0, 11, /*C2 x,y*/ 41, 27);
 
-    AllSpriteData[2].HitBoxCount = 3;                 //Normal cactus 1
-    SetHitBox(2, 0, /*x,y*/ 4, -4, /*x,y*/ 11, 15);   //Left
-    SetHitBox(2, 1, /*x,y*/ 12, -16, /*x,y*/ 21, 31); //Center
-    SetHitBox(2, 2, /*x,y*/ 22, -6, /*x,y*/ 28, 31);  //Right
+    AllSpriteData[2].HitBoxCount = 3;                       //Normal cactus 1
+    SetHitBox(2, 0, /*C1 x,y*/ 4, -4, /*C2 x,y*/ 11, 15);   //Left
+    SetHitBox(2, 1, /*C1 x,y*/ 12, -16, /*C2 x,y*/ 21, 31); //Center
+    SetHitBox(2, 2, /*C1 x,y*/ 22, -6, /*C2 x,y*/ 28, 31);  //Right
 
-    AllSpriteData[3].HitBoxCount = 3;                 //Normal cactus 2
-    SetHitBox(3, 0, /*x,y*/ 4, -4, /*x,y*/ 11, 15);   //Left
-    SetHitBox(3, 1, /*x,y*/ 12, -16, /*x,y*/ 21, 31); //Center
-    SetHitBox(3, 2, /*x,y*/ 22, -6, /*x,y*/ 27, 31);  //Right
+    AllSpriteData[3].HitBoxCount = 3;                       //Normal cactus 2
+    SetHitBox(3, 0, /*C1 x,y*/ 4, -4, /*C2 x,y*/ 11, 15);   //Left
+    SetHitBox(3, 1, /*C1 x,y*/ 12, -16, /*C2 x,y*/ 21, 31); //Center
+    SetHitBox(3, 2, /*C1 x,y*/ 22, -6, /*C2 x,y*/ 27, 31);  //Right
 
-    AllSpriteData[4].HitBoxCount = 3;                 //Normal cactus 3
-    SetHitBox(4, 0, /*x,y*/ 4, -11, /*x,y*/ 11, 15);  //Left
-    SetHitBox(4, 1, /*x,y*/ 12, -16, /*x,y*/ 21, 31); //Center
-    SetHitBox(4, 2, /*x,y*/ 22, -6, /*x,y*/ 28, 31);  //Right
+    AllSpriteData[4].HitBoxCount = 3;                       //Normal cactus 3
+    SetHitBox(4, 0, /*C1 x,y*/ 4, -11, /*C2 x,y*/ 11, 15);  //Left
+    SetHitBox(4, 1, /*C1 x,y*/ 12, -16, /*C2 x,y*/ 21, 31); //Center
+    SetHitBox(4, 2, /*C1 x,y*/ 22, -6, /*C2 x,y*/ 28, 31);  //Right
 
-    AllSpriteData[5].HitBoxCount = 3;                 //Big cactus
-    SetHitBox(5, 0, /*x,y*/ 8, 0, /*x,y*/ 13, 15);    //Left
-    SetHitBox(5, 1, /*x,y*/ 14, -16, /*x,y*/ 48, 31); //Center
-    SetHitBox(5, 2, /*x,y*/ 32, -5, /*x,y*/ 38, 31);  //Right
+    AllSpriteData[5].HitBoxCount = 3;                       //Big cactus
+    SetHitBox(5, 0, /*C1 x,y*/ 8, 0, /*C2 x,y*/ 13, 15);    //Left
+    SetHitBox(5, 1, /*C1 x,y*/ 14, -16, /*C2 x,y*/ 48, 31); //Center
+    SetHitBox(5, 2, /*C1 x,y*/ 32, -5, /*C2 x,y*/ 38, 31);  //Right
 
-    AllSpriteData[6].HitBoxCount = 3;               //Small cactus 1
-    SetHitBox(6, 0, /*x,y*/ 0, 7, /*x,y*/ 4, 18);   //Left
-    SetHitBox(6, 1, /*x,y*/ 5, 0, /*x,y*/ 26, 31);  //Center
-    SetHitBox(6, 2, /*x,y*/ 27, 4, /*x,y*/ 31, 15); //Right
+    AllSpriteData[6].HitBoxCount = 3;                     //Small cactus 1
+    SetHitBox(6, 0, /*C1 x,y*/ 0, 7, /*C2 x,y*/ 4, 18);   //Left
+    SetHitBox(6, 1, /*C1 x,y*/ 5, 0, /*C2 x,y*/ 26, 31);  //Center
+    SetHitBox(6, 2, /*C1 x,y*/ 27, 4, /*C2 x,y*/ 31, 15); //Right
 
-    AllSpriteData[7].HitBoxCount = 3;               //Small cactus 2
-    SetHitBox(7, 0, /*x,y*/ 0, 4, /*x,y*/ 4, 15);   //Left
-    SetHitBox(7, 1, /*x,y*/ 5, 0, /*x,y*/ 26, 31);  //Center
-    SetHitBox(7, 2, /*x,y*/ 27, 4, /*x,y*/ 31, 15); //Right
+    AllSpriteData[7].HitBoxCount = 3;                     //Small cactus 2
+    SetHitBox(7, 0, /*C1 x,y*/ 0, 4, /*C2 x,y*/ 4, 15);   //Left
+    SetHitBox(7, 1, /*C1 x,y*/ 5, 0, /*C2 x,y*/ 26, 31);  //Center
+    SetHitBox(7, 2, /*C1 x,y*/ 27, 4, /*C2 x,y*/ 31, 15); //Right
 
-    AllSpriteData[8].HitBoxCount = 3;               //Small cactus 3
-    SetHitBox(8, 0, /*x,y*/ 0, 3, /*x,y*/ 4, 18);   //Left
-    SetHitBox(8, 1, /*x,y*/ 5, 0, /*x,y*/ 26, 31);  //Center
-    SetHitBox(8, 2, /*x,y*/ 27, 4, /*x,y*/ 31, 15); //Right
+    AllSpriteData[8].HitBoxCount = 3;                     //Small cactus 3
+    SetHitBox(8, 0, /*C1 x,y*/ 0, 3, /*C2 x,y*/ 4, 18);   //Left
+    SetHitBox(8, 1, /*C1 x,y*/ 5, 0, /*C2 x,y*/ 26, 31);  //Center
+    SetHitBox(8, 2, /*C1 x,y*/ 27, 4, /*C2 x,y*/ 31, 15); //Right
 
-    AllSpriteData[9].HitBoxCount = 3;                //Bird 1
-    SetHitBox(9, 0, /*x,y*/ 0, 4, /*x,y*/ 11, 13);   //Head
-    SetHitBox(9, 1, /*x,y*/ 11, 10, /*x,y*/ 15, 27); //Center
-    SetHitBox(9, 2, /*x,y*/ 16, 13, /*x,y*/ 31, 19); //Back
+    AllSpriteData[9].HitBoxCount = 3;                      //Bird 1
+    SetHitBox(9, 0, /*C1 x,y*/ 0, 4, /*C2 x,y*/ 11, 13);   //Head
+    SetHitBox(9, 1, /*C1 x,y*/ 11, 10, /*C2 x,y*/ 15, 27); //Center
+    SetHitBox(9, 2, /*C1 x,y*/ 16, 13, /*C2 x,y*/ 31, 19); //Back
 
-    AllSpriteData[10].HitBoxCount = 3;                //Bird 2
-    SetHitBox(10, 0, /*x,y*/ 0, 4, /*x,y*/ 11, 13);   //Head
-    SetHitBox(10, 1, /*x,y*/ 11, 0, /*x,y*/ 15, 17);  //Center
-    SetHitBox(10, 2, /*x,y*/ 14, 13, /*x,y*/ 31, 20); //Back
+    AllSpriteData[10].HitBoxCount = 3;                      //Bird 2
+    SetHitBox(10, 0, /*C1 x,y*/ 0, 4, /*C2 x,y*/ 11, 13);   //Head
+    SetHitBox(10, 1, /*C1 x,y*/ 11, 0, /*C2 x,y*/ 15, 17);  //Center
+    SetHitBox(10, 2, /*C1 x,y*/ 14, 13, /*C2 x,y*/ 31, 20); //Back
 
     //Show start screen for first party
     iprintf("\x1b[30m"); //Black font color
@@ -299,11 +301,11 @@ int main(void)
         heldKey = keysHeld();    // keys currently held
 
         //Wait until the party has started
-        if (!PartyStated)
+        if (!PartyStarted)
         {
             if (pressedKey != 0)
             {
-                PartyStated = true;
+                PartyStarted = true;
                 iprintf("\x1b[12;0H");
                 iprintf("\x1b[2K");
             }
@@ -395,12 +397,14 @@ int main(void)
         NextDecor--;
         NextNight--;
 
+        //If NextNight count is egal to 0, change to day or night
         if (NextNight == 0)
         {
             NightMode = !NightMode;
             NextNight = 1500;
         }
 
+        //Make a color transition with it's night
         if (NightMode)
         {
             if (NightColorCoef >= 0.020)
@@ -408,11 +412,12 @@ int main(void)
                 NightColorCoef -= 0.020;
                 SetDayOrNightMode();
 
+                //Add a moon when night transition is done
                 if (NightColorCoef <= 0.020)
-                    AddNewDecor(4, 4 + rand() % 5); //4;5;6;7;8
+                    AddNewDecor(4, 4 + rand() % 5);
             }
         }
-        else
+        else //Make a color transition with it's day
         {
             if (NightColorCoef < 1)
             {
@@ -500,6 +505,7 @@ int main(void)
                 else
                     NextPointSound = 1000;
 
+                //Set BlinkCount for blinking score text
                 BlinkCount = 6;
             }
 
@@ -513,31 +519,33 @@ int main(void)
             NextScore = MaxSpeed - Speed + 1;
         }
 
-        //Scoll backgrouns
+        //Scoll background
         bgScroll(BackGroundId, Speed, 0);
         bgUpdate();
 
         //For all decors
         for (int i = 0; i < 5; i++)
         {
+            //Pass if current decor is not moving
             if (!AllDecor[i].IsMoving)
                 continue;
 
             //Move forward decors
             AllDecor[i].x -= AllDecor[i].Speed;
 
-            if (AllDecor[i].Type == 0)
+            if (AllDecor[i].Type == 0) //If current decor is a cloud
             {
-                if (AllDecor[i].x <= -64 - 16)
+                if (AllDecor[i].x <= -64 - 16) //Hide him later
                     AllDecor[i].IsMoving = false;
             }
             else
             {
-                if (AllDecor[i].x <= -32 - 16)
+                if (AllDecor[i].x <= -32 - 16) //Hide decor when off screen
                     AllDecor[i].IsMoving = false;
             }
 
             int SpriteCount = 1;
+            //Set SpriteCount to 2 when current decor is a cloud
             if (AllDecor[i].Type == 0)
                 SpriteCount = 2;
 
@@ -553,10 +561,14 @@ int main(void)
             oamUpdate(&oamMain);
         }
 
-        iprintf("\x1b[11;0H");
-        iprintf("\x1b[2K");
-        iprintf("\x1b[10;0H");
-        iprintf("\x1b[2K");
+        if (DebugMode)
+        {
+            //Clear line 10 and 11 (text) in debug mode (Used to clear collision testing texts)
+            iprintf("\x1b[11;0H");
+            iprintf("\x1b[2K");
+            iprintf("\x1b[10;0H");
+            iprintf("\x1b[2K");
+        }
 
         //For all obstacles
         for (int i = 0; i < 3; i++)
@@ -579,7 +591,7 @@ int main(void)
                     AllObstacles[i].IsMoving = false;
             }
 
-            if (AllObstacles[i].Type == 7)
+            if (AllObstacles[i].Type == 7) //If current obstacle is a bird
             {
                 //Reduce by 1 NextAnimationIn counter for bird animation
                 AllObstacles[i].NextAnimationIn--;
@@ -605,27 +617,30 @@ int main(void)
             }
 
             int PlayerHitBoxCount = 3;
-            if (IsDown)
+            if (IsDown) //Crouched dino use only one hit box
                 PlayerHitBoxCount = 1;
 
+            //Check collisions
             for (int CurrentObstacleHitBox = 0; CurrentObstacleHitBox < AllSpriteData[AllObstacles[i].Type + 2].HitBoxCount; CurrentObstacleHitBox++)
             {
                 for (int CurrentPlayerHitBox = 0; CurrentPlayerHitBox < PlayerHitBoxCount; CurrentPlayerHitBox++)
                 {
+                    //Sprite data offsets
                     int BirdOffset = 0;
                     int PlayerOffset = 0;
 
                     if (AllObstacles[i].WingsUp)
-                        BirdOffset = 1;
+                        BirdOffset = 1; //Use another sprite data when bird has wings up
 
                     if (IsDown)
-                        PlayerOffset = 1;
+                        PlayerOffset = 1; //Use another sprite data dino is crouched
 
+                    //Check if player hit boxs are in a obstacle hit box
                     if (xPlayerPosition - AllObstacles[i].x + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner1X <= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner2X && xPlayerPosition - AllObstacles[i].x + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner2X >= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner1X)                                 //Left & right OK
                         if (yPlayerPosition + yJumpOffset - AllObstacles[i].y + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner1Y <= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner2Y && yPlayerPosition + yJumpOffset - AllObstacles[i].y + AllSpriteData[0 + PlayerOffset].AllHitBox[CurrentPlayerHitBox].Corner2Y >= AllSpriteData[AllObstacles[i].Type + 2 + BirdOffset].AllHitBox[CurrentObstacleHitBox].Corner1Y) //Top & Bottom ok
                         {
                             IsDead = true;
-                            //iprintf("Col %d:%d ", CurrentPlayerHitBox, CurrentObstacleHitBox);
+                            //iprintf("Col %d:%d ", CurrentPlayerHitBox, CurrentObstacleHitBox); //For testing collision
                         }
                 }
             }
@@ -664,6 +679,7 @@ int main(void)
                 BlinkCount = 0;
                 ShowScore();
 
+                //Show some texts
                 iprintf("\x1b[10;8HG A M E  O V E R");
                 iprintf("\x1b[12;5HANY BUTTON  TO RESTART");
 
@@ -772,7 +788,6 @@ int main(void)
             IsDown = false;
 
             //Set AnimCount frame count
-            //AnimCount = ChangeAnimAt - 1;
             AnimCount = 1;
 
             //Apply Main sprite/back sprite scale

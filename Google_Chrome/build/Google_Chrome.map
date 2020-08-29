@@ -2670,7 +2670,7 @@ ARM.exidx
                 0x000000000b000000                . = ALIGN (0x4)
                 0x000000000b000000                __sbss_end = ABSOLUTE (.)
 
-.bss            0x0000000002044024     0x1980
+.bss            0x0000000002044024     0x197c
                 0x0000000002044024                __bss_start = ABSOLUTE (.)
                 0x0000000002044024                __bss_start__ = ABSOLUTE (.)
  *(EXCLUDE_FILE(*.twl*) .dynbss)
@@ -2680,7 +2680,7 @@ ARM.exidx
                 0x0000000002044024        0x1 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/crtbegin.o
  *fill*         0x0000000002044025        0x3 
  .bss.object.0  0x0000000002044028       0x18 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/thumb/crtbegin.o
- .bss           0x0000000002044040      0x440 ChromeGame.o
+ .bss           0x0000000002044040      0x43c ChromeGame.o
                 0x0000000002044040                AllObstacles
                 0x00000000020440ac                NightMode
                 0x00000000020440b0                CurrentHiScore
@@ -2697,185 +2697,184 @@ ARM.exidx
                 0x0000000002044134                pressedKey
                 0x0000000002044138                releasedKey
                 0x000000000204413c                heldKey
-                0x0000000002044140                PartyStated
+                0x0000000002044140                PartyStarted
                 0x0000000002044141                IsDead
                 0x0000000002044142                IsPaused
                 0x0000000002044144                yJumpOffset
                 0x0000000002044148                JumpTimer
                 0x000000000204414c                IsDown
-                0x000000000204414d                IsJumping
+                0x000000000204414d                DebugMode
+                0x000000000204414e                IsJumping
                 0x0000000002044150                JumpForce
-                0x0000000002044154                DebugMode
-                0x0000000002044158                AnimSprite2Id
-                0x000000000204415c                AllSpriteData
-                0x0000000002044398                AllDecor
-                0x0000000002044424                BottomScreen
- .bss           0x0000000002044480       0x18 C:/devkitPro/libnds/lib\libmm9.a(mm_comms.o)
- .bss           0x0000000002044498       0x19 C:/devkitPro/libnds/lib\libmm9.a(mm_main9.o)
-                0x0000000002044498                mmcbMemory
-                0x000000000204449c                mmModuleCount
-                0x00000000020444a0                mmSampleCount
-                0x00000000020444a4                mmMemoryBank
-                0x00000000020444a4                mmModuleBank
-                0x00000000020444a8                mmSampleBank
-                0x00000000020444ac                mmCallback
-                0x00000000020444b0                mmActiveStatus
- *fill*         0x00000000020444b1        0x3 
- .bss           0x00000000020444b4       0x44 C:/devkitPro/libnds/lib\libmm9.a(mm_soundbank.o)
+                0x0000000002044154                AnimSprite2Id
+                0x0000000002044158                AllSpriteData
+                0x0000000002044394                AllDecor
+                0x0000000002044420                BottomScreen
+ .bss           0x000000000204447c       0x18 C:/devkitPro/libnds/lib\libmm9.a(mm_comms.o)
+ .bss           0x0000000002044494       0x19 C:/devkitPro/libnds/lib\libmm9.a(mm_main9.o)
+                0x0000000002044494                mmcbMemory
+                0x0000000002044498                mmModuleCount
+                0x000000000204449c                mmSampleCount
+                0x00000000020444a0                mmMemoryBank
+                0x00000000020444a0                mmModuleBank
+                0x00000000020444a4                mmSampleBank
+                0x00000000020444a8                mmCallback
+                0x00000000020444ac                mmActiveStatus
+ *fill*         0x00000000020444ad        0x3 
+ .bss           0x00000000020444b0       0x44 C:/devkitPro/libnds/lib\libmm9.a(mm_soundbank.o)
  .bss.accessCounter
-                0x00000000020444f8        0x4 C:/devkitPro/libnds/lib\libfat.a(cache.o)
+                0x00000000020444f4        0x4 C:/devkitPro/libnds/lib\libfat.a(cache.o)
  .bss.bgIsTextLut
-                0x00000000020444fc        0x8 C:/devkitPro/libnds/lib\libnds9.a(background.o)
-                0x00000000020444fc                bgIsTextLut
- .bss.bgState   0x0000000002044504      0x140 C:/devkitPro/libnds/lib\libnds9.a(background.o)
-                0x0000000002044504                bgState
+                0x00000000020444f8        0x8 C:/devkitPro/libnds/lib\libnds9.a(background.o)
+                0x00000000020444f8                bgIsTextLut
+ .bss.bgState   0x0000000002044500      0x140 C:/devkitPro/libnds/lib\libnds9.a(background.o)
+                0x0000000002044500                bgState
  .bss.currentCopy
-                0x0000000002044644       0x5c C:/devkitPro/libnds/lib\libnds9.a(console.o)
-                0x0000000002044644                currentCopy
+                0x0000000002044640       0x5c C:/devkitPro/libnds/lib\libnds9.a(console.o)
+                0x0000000002044640                currentCopy
  .bss.OamMemory
-                0x00000000020446a0      0x400 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
-                0x00000000020446a0                OamMemory
- .bss.keys      0x0000000002044aa0        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
- .bss.keysold   0x0000000002044aa2        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                0x000000000204469c      0x400 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+                0x000000000204469c                OamMemory
+ .bss.keys      0x0000000002044a9c        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .bss.keysold   0x0000000002044a9e        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
  .bss.keysrepeat
-                0x0000000002044aa4        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+                0x0000000002044aa0        0x2 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
  .bss.__dsimode
-                0x0000000002044aa6        0x1 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
-                0x0000000002044aa6                __dsimode
- *fill*         0x0000000002044aa7        0x1 
+                0x0000000002044aa2        0x1 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+                0x0000000002044aa2                __dsimode
+ *fill*         0x0000000002044aa3        0x1 
  .bss.punixTime
-                0x0000000002044aa8        0x4 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
-                0x0000000002044aa8                punixTime
+                0x0000000002044aa4        0x4 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+                0x0000000002044aa4                punixTime
  .bss.fifo_address_data
-                0x0000000002044aac       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x0000000002044aac                fifo_address_data
+                0x0000000002044aa8       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002044aa8                fifo_address_data
  .bss.fifo_address_func
-                0x0000000002044aec       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x0000000002044aec                fifo_address_func
+                0x0000000002044ae8       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002044ae8                fifo_address_func
  .bss.fifo_address_queue
-                0x0000000002044b2c       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x0000000002044b2c                fifo_address_queue
+                0x0000000002044b28       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002044b28                fifo_address_queue
  .bss.fifo_buffer
-                0x0000000002044b6c      0x800 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x0000000002044b6c                fifo_buffer
+                0x0000000002044b68      0x800 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002044b68                fifo_buffer
  .bss.fifo_data_queue
-                0x000000000204536c       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x000000000204536c                fifo_data_queue
+                0x0000000002045368       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002045368                fifo_data_queue
  .bss.fifo_datamsg_data
-                0x00000000020453ac       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x00000000020453ac                fifo_datamsg_data
+                0x00000000020453a8       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x00000000020453a8                fifo_datamsg_data
  .bss.fifo_datamsg_func
-                0x00000000020453ec       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x00000000020453ec                fifo_datamsg_func
+                0x00000000020453e8       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x00000000020453e8                fifo_datamsg_func
  .bss.fifo_value32_data
-                0x000000000204542c       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x000000000204542c                fifo_value32_data
+                0x0000000002045428       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002045428                fifo_value32_data
  .bss.fifo_value32_func
-                0x000000000204546c       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x000000000204546c                fifo_value32_func
+                0x0000000002045468       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x0000000002045468                fifo_value32_func
  .bss.fifo_value32_queue
-                0x00000000020454ac       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x00000000020454ac                fifo_value32_queue
+                0x00000000020454a8       0x40 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x00000000020454a8                fifo_value32_queue
  .bss.processing
-                0x00000000020454ec        0x4 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
-                0x00000000020454ec                processing
+                0x00000000020454e8        0x4 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+                0x00000000020454e8                processing
  .bss.SDcallback
-                0x00000000020454f0        0x4 C:/devkitPro/libnds/lib\libnds9.a(system.o)
+                0x00000000020454ec        0x4 C:/devkitPro/libnds/lib\libnds9.a(system.o)
  .bss.__malloc_current_mallinfo
-                0x00000000020454f4       0x28 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x00000000020454f4                __malloc_current_mallinfo
+                0x00000000020454f0       0x28 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x00000000020454f0                __malloc_current_mallinfo
  .bss.__malloc_max_sbrked_mem
-                0x000000000204551c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x000000000204551c                __malloc_max_sbrked_mem
+                0x0000000002045518        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000002045518                __malloc_max_sbrked_mem
  .bss.__malloc_max_total_mem
-                0x0000000002045520        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000002045520                __malloc_max_total_mem
+                0x000000000204551c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x000000000204551c                __malloc_max_total_mem
  .bss.__malloc_top_pad
-                0x0000000002045524        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
-                0x0000000002045524                __malloc_top_pad
+                0x0000000002045520        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-mallocr.o)
+                0x0000000002045520                __malloc_top_pad
  .bss.__tzname_dst
-                0x0000000002045528        0xb c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
- *fill*         0x0000000002045533        0x1 
+                0x0000000002045524        0xb c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
+ *fill*         0x000000000204552f        0x1 
  .bss.__tzname_std
-                0x0000000002045534        0xb c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
- *fill*         0x000000000204553f        0x1 
+                0x0000000002045530        0xb c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
+ *fill*         0x000000000204553b        0x1 
  .bss.prev_tzenv
-                0x0000000002045540        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
+                0x000000000204553c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzset_r.o)
  .bss._daylight
-                0x0000000002045544        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
-                0x0000000002045544                _daylight
+                0x0000000002045540        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+                0x0000000002045540                _daylight
  .bss._timezone
-                0x0000000002045548        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
-                0x0000000002045548                _timezone
+                0x0000000002045544        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-tzvars.o)
+                0x0000000002045544                _timezone
  .bss.initial_env
-                0x000000000204554c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
+                0x0000000002045548        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libg.a(lib_a-environ.o)
  .bss.heap_start.0
-                0x0000000002045550        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
+                0x000000000204554c        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(sbrk.o)
  .bss.fake_heap_end
-                0x0000000002045554        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
-                0x0000000002045554                fake_heap_end
+                0x0000000002045550        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x0000000002045550                fake_heap_end
  .bss.fake_heap_start
-                0x0000000002045558        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
-                0x0000000002045558                fake_heap_start
- .bss.temp_cwd  0x000000000204555c      0x400 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(chdir.o)
+                0x0000000002045554        0x4 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(malloc_vars.o)
+                0x0000000002045554                fake_heap_start
+ .bss.temp_cwd  0x0000000002045558      0x400 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(chdir.o)
  .bss.__syscalls
-                0x000000000204595c       0x48 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
-                0x000000000204595c                __syscalls
+                0x0000000002045958       0x48 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb\libsysbase.a(syscall_support.o)
+                0x0000000002045958                __syscalls
  *(EXCLUDE_FILE(*.twl*) COMMON)
-                0x00000000020459a4                . = ALIGN (0x4)
-                0x00000000020459a4                __bss_end__ = ABSOLUTE (.)
-                0x00000000020459a4                __end__ = ABSOLUTE (.)
+                0x00000000020459a0                . = ALIGN (0x4)
+                0x00000000020459a0                __bss_end__ = ABSOLUTE (.)
+                0x00000000020459a0                __end__ = ABSOLUTE (.)
 
-.twl            0x00000000020459a4      0x15c load address 0x0000000002400000
+.twl            0x00000000020459a0      0x158 load address 0x0000000002400000
                 0x0000000002400000                __arm9i_lma__ = LOADADDR (.twl)
-                0x00000000020459a4                __arm9i_start__ = ABSOLUTE (.)
+                0x00000000020459a0                __arm9i_start__ = ABSOLUTE (.)
  *(.twl)
  *.twl*(.text .stub .text.* .gnu.linkonce.t.*)
  .text.sdio_ClearStatus
-                0x00000000020459a4        0x4 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x00000000020459a4                sdio_ClearStatus
+                0x00000000020459a0        0x4 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x00000000020459a0                sdio_ClearStatus
  .text.sdio_Startup
-                0x00000000020459a8       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x00000000020459a8                sdio_Startup
+                0x00000000020459a4       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x00000000020459a4                sdio_Startup
  .text.sdio_Shutdown
-                0x00000000020459f8        0x4 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x00000000020459f8                sdio_Shutdown
+                0x00000000020459f4        0x4 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x00000000020459f4                sdio_Shutdown
  .text.sdio_IsInserted
-                0x00000000020459fc       0x30 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x00000000020459fc                sdio_IsInserted
+                0x00000000020459f8       0x30 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x00000000020459f8                sdio_IsInserted
  .text.sdio_ReadSectors
-                0x0000000002045a2c       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x0000000002045a2c                sdio_ReadSectors
+                0x0000000002045a28       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x0000000002045a28                sdio_ReadSectors
  .text.sdio_WriteSectors
-                0x0000000002045a7c       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x0000000002045a7c                sdio_WriteSectors
- *fill*         0x0000000002045acc        0x4 
+                0x0000000002045a78       0x50 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x0000000002045a78                sdio_WriteSectors
  .text.sdio_WriteSectors.__stub
-                0x0000000002045ad0       0x10 linker stubs
+                0x0000000002045ac8       0x10 linker stubs
  *.twl*(.rodata)
  *.twl*(.roda)
  *.twl*(.rodata.*)
  .rodata.__io_dsisd
-                0x0000000002045ae0       0x20 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
-                0x0000000002045ae0                __io_dsisd
+                0x0000000002045ad8       0x20 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+                0x0000000002045ad8                __io_dsisd
  *.twl*(.data)
  *.twl*(.data.*)
  *.twl*(.gnu.linkonce.d*)
-                0x0000000002045b00                __arm9i_end__ = ABSOLUTE (.)
+                0x0000000002045af8                __arm9i_end__ = ABSOLUTE (.)
 
-.rel.dyn        0x0000000002045b00        0x0 load address 0x000000000240015c
- .rel.iplt      0x0000000002045b00        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
+.rel.dyn        0x0000000002045af8        0x0 load address 0x0000000002400158
+ .rel.iplt      0x0000000002045af8        0x0 c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/10.1.0/../../../../arm-none-eabi/lib/thumb/ds_arm9_crt0.o
 
-.twl_bss        0x0000000002045b00        0x0
-                0x0000000002045b00                __twl_bss_start__ = ABSOLUTE (.)
+.twl_bss        0x0000000002045af8        0x0
+                0x0000000002045af8                __twl_bss_start__ = ABSOLUTE (.)
  *(.twl_bss)
  *.twl*(.dynbss)
  *.twl*(.gnu.linkonce.b*)
  *.twl*(.bss*)
  *.twl*(COMMON)
-                0x0000000002045b00                . = ALIGN (0x4)
-                0x0000000002045b00                __twl_bss_end__ = ABSOLUTE (.)
-                0x0000000002045b00                __twl_end__ = ABSOLUTE (.)
+                0x0000000002045af8                . = ALIGN (0x4)
+                0x0000000002045af8                __twl_bss_end__ = ABSOLUTE (.)
+                0x0000000002045af8                __twl_end__ = ABSOLUTE (.)
 
 .stab
  *(.stab)
@@ -3485,122 +3484,122 @@ ARM.exidx
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000    0x2289b
+.debug_info     0x0000000000000000    0x22895
  *(.debug_info)
- .debug_info    0x0000000000000000     0x5042 ChromeGame.o
- .debug_info    0x0000000000005042     0x204d C:/devkitPro/libnds/lib\libfat.a(libfat.o)
- .debug_info    0x000000000000708f      0x260 C:/devkitPro/libnds/lib\libfat.a(disc.o)
- .debug_info    0x00000000000072ef     0x3783 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
- .debug_info    0x000000000000aa72     0x12da C:/devkitPro/libnds/lib\libfat.a(cache.o)
- .debug_info    0x000000000000bd4c     0x2833 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
- .debug_info    0x000000000000e57f     0x2fcb C:/devkitPro/libnds/lib\libfat.a(directory.o)
- .debug_info    0x000000000001154a     0x2c74 C:/devkitPro/libnds/lib\libfat.a(partition.o)
- .debug_info    0x00000000000141be      0x11d C:/devkitPro/libnds/lib\libfat.a(lock.o)
- .debug_info    0x00000000000142db      0x289 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
- .debug_info    0x0000000000014564      0xf1c C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
- .debug_info    0x0000000000015480      0xacd C:/devkitPro/libnds/lib\libnds9.a(background.o)
- .debug_info    0x0000000000015f4d      0x1aa C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
- .debug_info    0x00000000000160f7     0x1d8b C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
- .debug_info    0x0000000000017e82     0x26c6 C:/devkitPro/libnds/lib\libnds9.a(console.o)
- .debug_info    0x000000000001a548      0x79b C:/devkitPro/libnds/lib\libnds9.a(trig.o)
- .debug_info    0x000000000001ace3      0xda6 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
- .debug_info    0x000000000001ba89      0x466 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
- .debug_info    0x000000000001beef      0xb36 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
- .debug_info    0x000000000001ca25     0x12a5 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
- .debug_info    0x000000000001dcca      0xa64 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
- .debug_info    0x000000000001e72e       0x59 C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
- .debug_info    0x000000000001e787      0x68f C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
- .debug_info    0x000000000001ee16      0x378 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
- .debug_info    0x000000000001f18e     0x189c C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
- .debug_info    0x0000000000020a2a       0x22 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
- .debug_info    0x0000000000020a4c       0x26 C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
- .debug_info    0x0000000000020a72       0x22 C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
- .debug_info    0x0000000000020a94       0x22 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
- .debug_info    0x0000000000020ab6       0x26 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
- .debug_info    0x0000000000020adc       0x26 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
- .debug_info    0x0000000000020b02       0x26 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
- .debug_info    0x0000000000020b28      0x7c5 C:/devkitPro/libnds/lib\libnds9.a(video.o)
- .debug_info    0x00000000000212ed      0xa85 C:/devkitPro/libnds/lib\libnds9.a(system.o)
- .debug_info    0x0000000000021d72      0xb07 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
- .debug_info    0x0000000000022879       0x22 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_info    0x0000000000000000     0x503c ChromeGame.o
+ .debug_info    0x000000000000503c     0x204d C:/devkitPro/libnds/lib\libfat.a(libfat.o)
+ .debug_info    0x0000000000007089      0x260 C:/devkitPro/libnds/lib\libfat.a(disc.o)
+ .debug_info    0x00000000000072e9     0x3783 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
+ .debug_info    0x000000000000aa6c     0x12da C:/devkitPro/libnds/lib\libfat.a(cache.o)
+ .debug_info    0x000000000000bd46     0x2833 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
+ .debug_info    0x000000000000e579     0x2fcb C:/devkitPro/libnds/lib\libfat.a(directory.o)
+ .debug_info    0x0000000000011544     0x2c74 C:/devkitPro/libnds/lib\libfat.a(partition.o)
+ .debug_info    0x00000000000141b8      0x11d C:/devkitPro/libnds/lib\libfat.a(lock.o)
+ .debug_info    0x00000000000142d5      0x289 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
+ .debug_info    0x000000000001455e      0xf1c C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
+ .debug_info    0x000000000001547a      0xacd C:/devkitPro/libnds/lib\libnds9.a(background.o)
+ .debug_info    0x0000000000015f47      0x1aa C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
+ .debug_info    0x00000000000160f1     0x1d8b C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
+ .debug_info    0x0000000000017e7c     0x26c6 C:/devkitPro/libnds/lib\libnds9.a(console.o)
+ .debug_info    0x000000000001a542      0x79b C:/devkitPro/libnds/lib\libnds9.a(trig.o)
+ .debug_info    0x000000000001acdd      0xda6 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+ .debug_info    0x000000000001ba83      0x466 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_info    0x000000000001bee9      0xb36 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
+ .debug_info    0x000000000001ca1f     0x12a5 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_info    0x000000000001dcc4      0xa64 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+ .debug_info    0x000000000001e728       0x59 C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
+ .debug_info    0x000000000001e781      0x68f C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_info    0x000000000001ee10      0x378 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_info    0x000000000001f188     0x189c C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_info    0x0000000000020a24       0x22 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_info    0x0000000000020a46       0x26 C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
+ .debug_info    0x0000000000020a6c       0x22 C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_info    0x0000000000020a8e       0x22 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
+ .debug_info    0x0000000000020ab0       0x26 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
+ .debug_info    0x0000000000020ad6       0x26 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_info    0x0000000000020afc       0x26 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .debug_info    0x0000000000020b22      0x7c5 C:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_info    0x00000000000212e7      0xa85 C:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_info    0x0000000000021d6c      0xb07 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+ .debug_info    0x0000000000022873       0x22 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
 
-.debug_abbrev   0x0000000000000000     0x542e
+.debug_abbrev   0x0000000000000000     0x543d
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x567 ChromeGame.o
- .debug_abbrev  0x0000000000000567      0x3e2 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
- .debug_abbrev  0x0000000000000949       0xd8 C:/devkitPro/libnds/lib\libfat.a(disc.o)
- .debug_abbrev  0x0000000000000a21      0x507 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
- .debug_abbrev  0x0000000000000f28      0x3e5 C:/devkitPro/libnds/lib\libfat.a(cache.o)
- .debug_abbrev  0x000000000000130d      0x3e0 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
- .debug_abbrev  0x00000000000016ed      0x509 C:/devkitPro/libnds/lib\libfat.a(directory.o)
- .debug_abbrev  0x0000000000001bf6      0x564 C:/devkitPro/libnds/lib\libfat.a(partition.o)
- .debug_abbrev  0x000000000000215a       0x92 C:/devkitPro/libnds/lib\libfat.a(lock.o)
- .debug_abbrev  0x00000000000021ec       0xd5 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
- .debug_abbrev  0x00000000000022c1      0x31a C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
- .debug_abbrev  0x00000000000025db      0x33f C:/devkitPro/libnds/lib\libnds9.a(background.o)
- .debug_abbrev  0x000000000000291a      0x118 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
- .debug_abbrev  0x0000000000002a32      0x361 C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
- .debug_abbrev  0x0000000000002d93      0x547 C:/devkitPro/libnds/lib\libnds9.a(console.o)
- .debug_abbrev  0x00000000000032da      0x224 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
- .debug_abbrev  0x00000000000034fe      0x384 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
- .debug_abbrev  0x0000000000003882      0x1a0 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
- .debug_abbrev  0x0000000000003a22      0x2cd C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
- .debug_abbrev  0x0000000000003cef      0x33f C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
- .debug_abbrev  0x000000000000402e      0x1e5 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
- .debug_abbrev  0x0000000000004213       0x47 C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
- .debug_abbrev  0x000000000000425a      0x2dd C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
- .debug_abbrev  0x0000000000004537      0x1a8 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
- .debug_abbrev  0x00000000000046df      0x491 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
- .debug_abbrev  0x0000000000004b70       0x12 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
- .debug_abbrev  0x0000000000004b82       0x14 C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
- .debug_abbrev  0x0000000000004b96       0x12 C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
- .debug_abbrev  0x0000000000004ba8       0x12 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
- .debug_abbrev  0x0000000000004bba       0x14 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
- .debug_abbrev  0x0000000000004bce       0x14 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
- .debug_abbrev  0x0000000000004be2       0x14 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
- .debug_abbrev  0x0000000000004bf6      0x241 C:/devkitPro/libnds/lib\libnds9.a(video.o)
- .debug_abbrev  0x0000000000004e37      0x2ff C:/devkitPro/libnds/lib\libnds9.a(system.o)
- .debug_abbrev  0x0000000000005136      0x2e6 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
- .debug_abbrev  0x000000000000541c       0x12 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_abbrev  0x0000000000000000      0x576 ChromeGame.o
+ .debug_abbrev  0x0000000000000576      0x3e2 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
+ .debug_abbrev  0x0000000000000958       0xd8 C:/devkitPro/libnds/lib\libfat.a(disc.o)
+ .debug_abbrev  0x0000000000000a30      0x507 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
+ .debug_abbrev  0x0000000000000f37      0x3e5 C:/devkitPro/libnds/lib\libfat.a(cache.o)
+ .debug_abbrev  0x000000000000131c      0x3e0 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
+ .debug_abbrev  0x00000000000016fc      0x509 C:/devkitPro/libnds/lib\libfat.a(directory.o)
+ .debug_abbrev  0x0000000000001c05      0x564 C:/devkitPro/libnds/lib\libfat.a(partition.o)
+ .debug_abbrev  0x0000000000002169       0x92 C:/devkitPro/libnds/lib\libfat.a(lock.o)
+ .debug_abbrev  0x00000000000021fb       0xd5 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
+ .debug_abbrev  0x00000000000022d0      0x31a C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
+ .debug_abbrev  0x00000000000025ea      0x33f C:/devkitPro/libnds/lib\libnds9.a(background.o)
+ .debug_abbrev  0x0000000000002929      0x118 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
+ .debug_abbrev  0x0000000000002a41      0x361 C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
+ .debug_abbrev  0x0000000000002da2      0x547 C:/devkitPro/libnds/lib\libnds9.a(console.o)
+ .debug_abbrev  0x00000000000032e9      0x224 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
+ .debug_abbrev  0x000000000000350d      0x384 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+ .debug_abbrev  0x0000000000003891      0x1a0 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_abbrev  0x0000000000003a31      0x2cd C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
+ .debug_abbrev  0x0000000000003cfe      0x33f C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_abbrev  0x000000000000403d      0x1e5 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+ .debug_abbrev  0x0000000000004222       0x47 C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
+ .debug_abbrev  0x0000000000004269      0x2dd C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_abbrev  0x0000000000004546      0x1a8 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_abbrev  0x00000000000046ee      0x491 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_abbrev  0x0000000000004b7f       0x12 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_abbrev  0x0000000000004b91       0x14 C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
+ .debug_abbrev  0x0000000000004ba5       0x12 C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_abbrev  0x0000000000004bb7       0x12 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
+ .debug_abbrev  0x0000000000004bc9       0x14 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
+ .debug_abbrev  0x0000000000004bdd       0x14 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_abbrev  0x0000000000004bf1       0x14 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .debug_abbrev  0x0000000000004c05      0x241 C:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_abbrev  0x0000000000004e46      0x2ff C:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_abbrev  0x0000000000005145      0x2e6 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+ .debug_abbrev  0x000000000000542b       0x12 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
 
-.debug_line     0x0000000000000000    0x12a2f
+.debug_line     0x0000000000000000    0x12a41
  *(.debug_line)
- .debug_line    0x0000000000000000     0x236c ChromeGame.o
- .debug_line    0x000000000000236c      0x784 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
- .debug_line    0x0000000000002af0      0x141 C:/devkitPro/libnds/lib\libfat.a(disc.o)
- .debug_line    0x0000000000002c31     0x2050 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
- .debug_line    0x0000000000004c81      0xb85 C:/devkitPro/libnds/lib\libfat.a(cache.o)
- .debug_line    0x0000000000005806     0x1043 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
- .debug_line    0x0000000000006849     0x2028 C:/devkitPro/libnds/lib\libfat.a(directory.o)
- .debug_line    0x0000000000008871      0xec2 C:/devkitPro/libnds/lib\libfat.a(partition.o)
- .debug_line    0x0000000000009733       0x87 C:/devkitPro/libnds/lib\libfat.a(lock.o)
- .debug_line    0x00000000000097ba      0x276 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
- .debug_line    0x0000000000009a30      0x895 C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
- .debug_line    0x000000000000a2c5      0x6a4 C:/devkitPro/libnds/lib\libnds9.a(background.o)
- .debug_line    0x000000000000a969      0x1d4 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
- .debug_line    0x000000000000ab3d     0x16fc C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
- .debug_line    0x000000000000c239     0x146c C:/devkitPro/libnds/lib\libnds9.a(console.o)
- .debug_line    0x000000000000d6a5      0x77d C:/devkitPro/libnds/lib\libnds9.a(trig.o)
- .debug_line    0x000000000000de22      0x797 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
- .debug_line    0x000000000000e5b9      0x3ad C:/devkitPro/libnds/lib\libnds9.a(keys.o)
- .debug_line    0x000000000000e966      0x749 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
- .debug_line    0x000000000000f0af      0x58b C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
- .debug_line    0x000000000000f63a      0x1f0 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
- .debug_line    0x000000000000f82a       0x8f C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
- .debug_line    0x000000000000f8b9      0x569 C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
- .debug_line    0x000000000000fe22      0x252 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
- .debug_line    0x0000000000010074     0x142b C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
- .debug_line    0x000000000001149f       0xe0 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
- .debug_line    0x000000000001157f       0x9e C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
- .debug_line    0x000000000001161d      0x13c C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
- .debug_line    0x0000000000011759       0xc7 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
- .debug_line    0x0000000000011820       0xb0 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
- .debug_line    0x00000000000118d0       0xd9 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
- .debug_line    0x00000000000119a9       0xa9 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
- .debug_line    0x0000000000011a52      0x4d9 C:/devkitPro/libnds/lib\libnds9.a(video.o)
- .debug_line    0x0000000000011f2b      0x4e1 C:/devkitPro/libnds/lib\libnds9.a(system.o)
- .debug_line    0x000000000001240c      0x424 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
- .debug_line    0x0000000000012830      0x1ff C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_line    0x0000000000000000     0x237e ChromeGame.o
+ .debug_line    0x000000000000237e      0x784 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
+ .debug_line    0x0000000000002b02      0x141 C:/devkitPro/libnds/lib\libfat.a(disc.o)
+ .debug_line    0x0000000000002c43     0x2050 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
+ .debug_line    0x0000000000004c93      0xb85 C:/devkitPro/libnds/lib\libfat.a(cache.o)
+ .debug_line    0x0000000000005818     0x1043 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
+ .debug_line    0x000000000000685b     0x2028 C:/devkitPro/libnds/lib\libfat.a(directory.o)
+ .debug_line    0x0000000000008883      0xec2 C:/devkitPro/libnds/lib\libfat.a(partition.o)
+ .debug_line    0x0000000000009745       0x87 C:/devkitPro/libnds/lib\libfat.a(lock.o)
+ .debug_line    0x00000000000097cc      0x276 C:/devkitPro/libnds/lib\libfat.a(filetime.o)
+ .debug_line    0x0000000000009a42      0x895 C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
+ .debug_line    0x000000000000a2d7      0x6a4 C:/devkitPro/libnds/lib\libnds9.a(background.o)
+ .debug_line    0x000000000000a97b      0x1d4 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
+ .debug_line    0x000000000000ab4f     0x16fc C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
+ .debug_line    0x000000000000c24b     0x146c C:/devkitPro/libnds/lib\libnds9.a(console.o)
+ .debug_line    0x000000000000d6b7      0x77d C:/devkitPro/libnds/lib\libnds9.a(trig.o)
+ .debug_line    0x000000000000de34      0x797 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+ .debug_line    0x000000000000e5cb      0x3ad C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_line    0x000000000000e978      0x749 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
+ .debug_line    0x000000000000f0c1      0x58b C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_line    0x000000000000f64c      0x1f0 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+ .debug_line    0x000000000000f83c       0x8f C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
+ .debug_line    0x000000000000f8cb      0x569 C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_line    0x000000000000fe34      0x252 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_line    0x0000000000010086     0x142b C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_line    0x00000000000114b1       0xe0 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_line    0x0000000000011591       0x9e C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
+ .debug_line    0x000000000001162f      0x13c C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_line    0x000000000001176b       0xc7 C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
+ .debug_line    0x0000000000011832       0xb0 C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
+ .debug_line    0x00000000000118e2       0xd9 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_line    0x00000000000119bb       0xa9 C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .debug_line    0x0000000000011a64      0x4d9 C:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_line    0x0000000000011f3d      0x4e1 C:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_line    0x000000000001241e      0x424 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+ .debug_line    0x0000000000012842      0x1ff C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
 
 .debug_frame    0x0000000000000000     0x1968
  *(.debug_frame)
@@ -3631,108 +3630,108 @@ ARM.exidx
  .debug_frame   0x00000000000017d0       0xf8 C:/devkitPro/libnds/lib\libnds9.a(system.o)
  .debug_frame   0x00000000000018c8       0xa0 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
 
-.debug_str      0x0000000000000000     0x65dd
+.debug_str      0x0000000000000000     0x65de
  *(.debug_str)
- .debug_str     0x0000000000000000     0x16b2 ChromeGame.o
-                                       0x1829 (size before relaxing)
- .debug_str     0x00000000000016b2      0x84f C:/devkitPro/libnds/lib\libfat.a(libfat.o)
+ .debug_str     0x0000000000000000     0x16b3 ChromeGame.o
+                                       0x182a (size before relaxing)
+ .debug_str     0x00000000000016b3      0x84f C:/devkitPro/libnds/lib\libfat.a(libfat.o)
                                         0xf42 (size before relaxing)
- .debug_str     0x0000000000001f01       0x4f C:/devkitPro/libnds/lib\libfat.a(disc.o)
+ .debug_str     0x0000000000001f02       0x4f C:/devkitPro/libnds/lib\libfat.a(disc.o)
                                         0x313 (size before relaxing)
- .debug_str     0x0000000000001f50      0x643 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
+ .debug_str     0x0000000000001f51      0x643 C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
                                        0x116f (size before relaxing)
- .debug_str     0x0000000000002593      0x1a6 C:/devkitPro/libnds/lib\libfat.a(cache.o)
+ .debug_str     0x0000000000002594      0x1a6 C:/devkitPro/libnds/lib\libfat.a(cache.o)
                                         0x650 (size before relaxing)
- .debug_str     0x0000000000002739      0x283 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
+ .debug_str     0x000000000000273a      0x283 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
                                        0x10bd (size before relaxing)
- .debug_str     0x00000000000029bc      0x566 C:/devkitPro/libnds/lib\libfat.a(directory.o)
+ .debug_str     0x00000000000029bd      0x566 C:/devkitPro/libnds/lib\libfat.a(directory.o)
                                         0xfe9 (size before relaxing)
- .debug_str     0x0000000000002f22      0x4f7 C:/devkitPro/libnds/lib\libfat.a(partition.o)
+ .debug_str     0x0000000000002f23      0x4f7 C:/devkitPro/libnds/lib\libfat.a(partition.o)
                                        0x13ae (size before relaxing)
- .debug_str     0x0000000000003419       0x55 C:/devkitPro/libnds/lib\libfat.a(lock.o)
+ .debug_str     0x000000000000341a       0x55 C:/devkitPro/libnds/lib\libfat.a(lock.o)
                                         0x216 (size before relaxing)
- .debug_str     0x000000000000346e       0x7a C:/devkitPro/libnds/lib\libfat.a(filetime.o)
+ .debug_str     0x000000000000346f       0x7a C:/devkitPro/libnds/lib\libfat.a(filetime.o)
                                         0x2c5 (size before relaxing)
- .debug_str     0x00000000000034e8       0xc8 C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
+ .debug_str     0x00000000000034e9       0xc8 C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
                                         0x71f (size before relaxing)
- .debug_str     0x00000000000035b0      0x3da C:/devkitPro/libnds/lib\libnds9.a(background.o)
+ .debug_str     0x00000000000035b1      0x3da C:/devkitPro/libnds/lib\libnds9.a(background.o)
                                         0x79b (size before relaxing)
- .debug_str     0x000000000000398a       0xc7 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
+ .debug_str     0x000000000000398b       0xc7 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
                                         0x266 (size before relaxing)
- .debug_str     0x0000000000003a51      0x16d C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
+ .debug_str     0x0000000000003a52      0x16d C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
                                         0x7d7 (size before relaxing)
- .debug_str     0x0000000000003bbe      0x406 C:/devkitPro/libnds/lib\libnds9.a(console.o)
+ .debug_str     0x0000000000003bbf      0x406 C:/devkitPro/libnds/lib\libnds9.a(console.o)
                                        0x1267 (size before relaxing)
- .debug_str     0x0000000000003fc4      0x102 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
+ .debug_str     0x0000000000003fc5      0x102 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
                                         0x2e7 (size before relaxing)
- .debug_str     0x00000000000040c6      0x137 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+ .debug_str     0x00000000000040c7      0x137 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
                                         0x870 (size before relaxing)
- .debug_str     0x00000000000041fd      0x15d C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_str     0x00000000000041fe      0x15d C:/devkitPro/libnds/lib\libnds9.a(keys.o)
                                         0x420 (size before relaxing)
- .debug_str     0x000000000000435a      0x43e C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
+ .debug_str     0x000000000000435b      0x43e C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
                                         0x77a (size before relaxing)
- .debug_str     0x0000000000004798      0x410 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_str     0x0000000000004799      0x410 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
                                         0xc4b (size before relaxing)
- .debug_str     0x0000000000004ba8       0x7e C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+ .debug_str     0x0000000000004ba9       0x7e C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
                                         0x689 (size before relaxing)
- .debug_str     0x0000000000004c26       0x7f C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
+ .debug_str     0x0000000000004c27       0x7f C:/devkitPro/libnds/lib\libnds9.a(securearea.o)
                                         0x16e (size before relaxing)
- .debug_str     0x0000000000004ca5      0x193 C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_str     0x0000000000004ca6      0x193 C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
                                         0x48d (size before relaxing)
- .debug_str     0x0000000000004e38      0x1db C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_str     0x0000000000004e39      0x1db C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
                                         0x3e5 (size before relaxing)
- .debug_str     0x0000000000005013      0x486 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_str     0x0000000000005014      0x486 C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
                                         0x894 (size before relaxing)
- .debug_str     0x0000000000005499       0x70 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
+ .debug_str     0x000000000000549a       0x70 C:/devkitPro/libnds/lib\libnds9.a(dcache.o)
                                          0xc4 (size before relaxing)
- .debug_str     0x0000000000005509       0x6c C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
+ .debug_str     0x000000000000550a       0x6c C:/devkitPro/libnds/lib\libnds9.a(dldi_stub.o)
                                          0xcc (size before relaxing)
- .debug_str     0x0000000000005575       0x6e C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
+ .debug_str     0x0000000000005576       0x6e C:/devkitPro/libnds/lib\libnds9.a(mpu_setup.o)
                                          0xce (size before relaxing)
- .debug_str     0x00000000000055e3       0x6d C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
+ .debug_str     0x00000000000055e4       0x6d C:/devkitPro/libnds/lib\libnds9.a(IntrWait.o)
                                          0xcd (size before relaxing)
- .debug_str     0x0000000000005650       0x6e C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
+ .debug_str     0x0000000000005651       0x6e C:/devkitPro/libnds/lib\libnds9.a(cpu_clock.o)
                                          0xce (size before relaxing)
- .debug_str     0x00000000000056be       0x73 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
+ .debug_str     0x00000000000056bf       0x73 C:/devkitPro/libnds/lib\libnds9.a(interruptDispatcher.o)
                                          0xd3 (size before relaxing)
- .debug_str     0x0000000000005731       0x6c C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
+ .debug_str     0x0000000000005732       0x6c C:/devkitPro/libnds/lib\libnds9.a(swiSoftReset.o)
                                          0xcc (size before relaxing)
- .debug_str     0x000000000000579d      0x90b C:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_str     0x000000000000579e      0x90b C:/devkitPro/libnds/lib\libnds9.a(video.o)
                                         0xc53 (size before relaxing)
- .debug_str     0x00000000000060a8      0x383 C:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_str     0x00000000000060a9      0x383 C:/devkitPro/libnds/lib\libnds9.a(system.o)
                                         0x791 (size before relaxing)
- .debug_str     0x000000000000642b      0x149 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+ .debug_str     0x000000000000642c      0x149 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
                                         0x81a (size before relaxing)
- .debug_str     0x0000000000006574       0x69 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
+ .debug_str     0x0000000000006575       0x69 C:/devkitPro/libnds/lib\libnds9.a(biosCalls.o)
                                          0xc9 (size before relaxing)
 
-.debug_loc      0x0000000000000000    0x15d95
+.debug_loc      0x0000000000000000    0x15d44
  *(.debug_loc)
- .debug_loc     0x0000000000000000     0x2847 ChromeGame.o
- .debug_loc     0x0000000000002847      0x705 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
- .debug_loc     0x0000000000002f4c     0x3adb C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
- .debug_loc     0x0000000000006a27     0x16d7 C:/devkitPro/libnds/lib\libfat.a(cache.o)
- .debug_loc     0x00000000000080fe     0x1008 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
- .debug_loc     0x0000000000009106     0x3b6f C:/devkitPro/libnds/lib\libfat.a(directory.o)
- .debug_loc     0x000000000000cc75     0x132a C:/devkitPro/libnds/lib\libfat.a(partition.o)
- .debug_loc     0x000000000000df9f       0x4a C:/devkitPro/libnds/lib\libfat.a(filetime.o)
- .debug_loc     0x000000000000dfe9      0xd9e C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
- .debug_loc     0x000000000000ed87      0x427 C:/devkitPro/libnds/lib\libnds9.a(background.o)
- .debug_loc     0x000000000000f1ae       0x66 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
- .debug_loc     0x000000000000f214     0x1c9e C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
- .debug_loc     0x0000000000010eb2     0x159b C:/devkitPro/libnds/lib\libnds9.a(console.o)
- .debug_loc     0x000000000001244d      0xbe6 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
- .debug_loc     0x0000000000013033      0x826 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
- .debug_loc     0x0000000000013859       0x15 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
- .debug_loc     0x000000000001386e      0x3b7 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
- .debug_loc     0x0000000000013c25       0xf0 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
- .debug_loc     0x0000000000013d15       0x25 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
- .debug_loc     0x0000000000013d3a      0x26c C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
- .debug_loc     0x0000000000013fa6       0x64 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
- .debug_loc     0x000000000001400a     0x168e C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
- .debug_loc     0x0000000000015698      0x2e5 C:/devkitPro/libnds/lib\libnds9.a(video.o)
- .debug_loc     0x000000000001597d      0x202 C:/devkitPro/libnds/lib\libnds9.a(system.o)
- .debug_loc     0x0000000000015b7f      0x216 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
+ .debug_loc     0x0000000000000000     0x27f6 ChromeGame.o
+ .debug_loc     0x00000000000027f6      0x705 C:/devkitPro/libnds/lib\libfat.a(libfat.o)
+ .debug_loc     0x0000000000002efb     0x3adb C:/devkitPro/libnds/lib\libfat.a(fatfile.o)
+ .debug_loc     0x00000000000069d6     0x16d7 C:/devkitPro/libnds/lib\libfat.a(cache.o)
+ .debug_loc     0x00000000000080ad     0x1008 C:/devkitPro/libnds/lib\libfat.a(fatdir.o)
+ .debug_loc     0x00000000000090b5     0x3b6f C:/devkitPro/libnds/lib\libfat.a(directory.o)
+ .debug_loc     0x000000000000cc24     0x132a C:/devkitPro/libnds/lib\libfat.a(partition.o)
+ .debug_loc     0x000000000000df4e       0x4a C:/devkitPro/libnds/lib\libfat.a(filetime.o)
+ .debug_loc     0x000000000000df98      0xd9e C:/devkitPro/libnds/lib\libfat.a(file_allocation_table.o)
+ .debug_loc     0x000000000000ed36      0x427 C:/devkitPro/libnds/lib\libnds9.a(background.o)
+ .debug_loc     0x000000000000f15d       0x66 C:/devkitPro/libnds/lib\libnds9.a(sassert.o)
+ .debug_loc     0x000000000000f1c3     0x1c9e C:/devkitPro/libnds/lib\libnds9.a(sprite_alloc.o)
+ .debug_loc     0x0000000000010e61     0x159b C:/devkitPro/libnds/lib\libnds9.a(console.o)
+ .debug_loc     0x00000000000123fc      0xbe6 C:/devkitPro/libnds/lib\libnds9.a(trig.o)
+ .debug_loc     0x0000000000012fe2      0x826 C:/devkitPro/libnds/lib\libnds9.a(sprite.o)
+ .debug_loc     0x0000000000013808       0x15 C:/devkitPro/libnds/lib\libnds9.a(keys.o)
+ .debug_loc     0x000000000001381d      0x3b7 C:/devkitPro/libnds/lib\libnds9.a(dldi.o)
+ .debug_loc     0x0000000000013bd4       0xf0 C:/devkitPro/libnds/lib\libnds9.a(initSystem.o)
+ .debug_loc     0x0000000000013cc4       0x25 C:/devkitPro/libnds/lib\libnds9.a(timeSupport.o)
+ .debug_loc     0x0000000000013ce9      0x26c C:/devkitPro/libnds/lib\libnds9.a(interrupts.o)
+ .debug_loc     0x0000000000013f55       0x64 C:/devkitPro/libnds/lib\libnds9.a(libnds_exit.arm.o)
+ .debug_loc     0x0000000000013fb9     0x168e C:/devkitPro/libnds/lib\libnds9.a(fifosystem.o)
+ .debug_loc     0x0000000000015647      0x2e5 C:/devkitPro/libnds/lib\libnds9.a(video.o)
+ .debug_loc     0x000000000001592c      0x202 C:/devkitPro/libnds/lib\libnds9.a(system.o)
+ .debug_loc     0x0000000000015b2e      0x216 C:/devkitPro/libnds/lib\libnds9.a(sd.twl.o)
 
 .debug_macinfo
  *(.debug_macinfo)
