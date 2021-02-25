@@ -19,7 +19,7 @@ Download Google_Chrome/Google_Chrome.nds or [here](https://github.com/Fewnity/T-
 
 Run it on emulator like [melonDS](http://melonds.kuribo64.net/downloads.php).
 
-**For a real Nintendo DS**, you will need a R4 flashcart, may no work on other flashcart like M3DS REAL.
+**For a real Nintendo DS**, you will need a R4 flashcart, may no work on other flashcart like M3DS REAL (flashcart needs nitrofs support).
 
 For R4, you will need [this firmware](http://old.r4wood.com/pages/Wood-R4-Kernel.html) (Wood R4 V1.62).
 
